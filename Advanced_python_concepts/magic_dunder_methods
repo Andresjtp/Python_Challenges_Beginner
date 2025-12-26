@@ -1,17 +1,22 @@
-# Example for Magic/Dunder Methods in Python 
+# Example for Magic/Dunder Methods in Python
+
+
 class Book:
-    def __init__(self, title, author): # Basic constructor
+    def __init__(self, title, author):  # Basic constructor
         self.title = title
         self.author = author
 
     def __str__(self):  # String representation of the object
         return f"'{self.title}' by {self.author}"
 
-    def __repr__(self): # Official representation of the object/ used mainly for developers to debug
+    def __repr__(
+        self,
+    ):  # Official representation of the object/ used mainly for developers to debug
         return f"Book: {self.title!r}, author: {self.author!r})"
 
     def __len__(self):  # Length of the object
         return len(self.title)
+
 
 b1 = Book("1984", "George Orwell")
 print(str(b1))  # Calls __str__ method
