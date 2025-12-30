@@ -1,6 +1,5 @@
+
 # Example for Magic/Dunder Methods in Python
-
-
 class Book:
     def __init__(self, title, author):  # Basic constructor
         self.title = title
