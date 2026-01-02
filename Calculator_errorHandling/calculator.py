@@ -26,15 +26,16 @@ while True:
         if not first_input:
             raise ValueError("Please enter a number.")
         first_input = int(first_input)
+        
+        operator = input("enter operator: ")
 
         second_input = input("Enter a number: ")
         if not second_input:
             raise ValueError("Please enter a number: ")
-        if second_input == 0:
+        if operator == "/" and int(second_input) == 0:
             raise ZeroDivisionError("You can't divide by zero ")
         second_input = int(second_input)
 
-        operator = input("enter operator: ")
         if operator == "+":
             print(f"{first_input} {operator} {second_input} = ", Calculator.add(first_input, second_input))
         elif operator == "-":
